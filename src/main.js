@@ -5,8 +5,11 @@ import router from './router'
 /* element ui 前端组件 */
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+
 /* 提供axios请求 */
 import axios from 'axios'
+
+import store from './store'
 
 Vue.config.productionTip = false
 /* 允许跨域携带cookie */
@@ -16,5 +19,6 @@ Vue.use(ElementUI)
 Vue.prototype.$axios = axios
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')
