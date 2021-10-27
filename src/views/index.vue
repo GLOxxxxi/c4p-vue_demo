@@ -42,9 +42,9 @@
           </el-col>
 
           <el-col :span="1">
-            <a href="#" title="个人主页">
+            <router-link href="/space" title="个人主页" to="/space">
               <img title="" alt="个人头像" src="../assets/晚晚.png" style="height: 40px; width: 40px;border-radius:50%;">
-            </a>
+            </router-link>
           </el-col>
 
           <el-col :span="5">

@@ -8,12 +8,13 @@ module.exports ={
         proxy : {
             '/api': {
                 // 配置跨域请求路径
-                target: 'http://localhost:8080',
+                target: 'http://localhost:8082',
                 ws: false,
                 changeOrigin : true,
-                // pathRewrite:{
-                //     "/api":""
-                // }
+                // 重写请求地址
+                pathRewrite:{
+                    "/api":""
+                }
             }
         }
     },
