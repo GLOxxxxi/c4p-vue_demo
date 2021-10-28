@@ -18,5 +18,24 @@ module.exports ={
             }
         }
     },
+    css: {
+      loaderOptions: {
+          // 等比例缩放
+          postcss: {
+              plugins: {
+                  postcss
+              }
+          }
+      }
+    },
     lintOnSave: false
 }
+
+// 1. 引入等比适配插件
+const px2rem = require('postcss-px2rem')
+
+// 2. 配置基本大小
+const postcss = px2rem({
+    // 基准大小 baseSize，需要和rem.js中相同
+    remUnit: 100
+})

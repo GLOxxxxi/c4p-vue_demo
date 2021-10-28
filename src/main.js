@@ -11,6 +11,9 @@ import axios from 'axios'
 
 import store from './store'
 
+/* 添加自适应js */
+import './utils/flexible'
+
 Vue.config.productionTip = false
 /* 允许跨域携带cookie */
 axios.defaults.withCredentials = true

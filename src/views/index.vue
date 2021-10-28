@@ -2,10 +2,13 @@
   <div>
    <el-container>
      <div class="main">
-       <el-main class="" style="margin-top: 0;width: 1430px">
+       <el-main>
          <!--   页头导航栏      -->
          <el-row :gutter="20" style="margin-left: 10%;">
            <el-col :span="2">
+			 <router-link to="/space">
+				 space 
+			 </router-link>
              <el-link :underline="false" type="info" href="#" target="_blank">Python</el-link>
            </el-col>
            <el-col :span="2">
@@ -204,8 +207,9 @@ export default {
 /* 侧边容器 */
 .aside-container {
   height: 430px;
-  width: 1350px;
-  margin-left: 5%;
+  width: 100%;
+  max-width: 1300px;
+
 }
 
 /* 轮播图 */

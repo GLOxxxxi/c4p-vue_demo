@@ -103,6 +103,7 @@
   </div>
 </template>
 <script>
+import './static/js/rem'
 export default {
   name: "index",
   data() {
@@ -114,7 +115,10 @@ export default {
   methods: {
     handleNodeClick(data) {
       console.log(data);
-    }
+    },
+  },
+  // 安装
+  mounted() {
   }
 }
 </script>
@@ -158,7 +162,9 @@ li {
   /* 固定工具栏 上下滚动固定位置，左右滚动正常 */
   position: sticky;
   top: 10px;
-  width: 1510px;
+  width: 100%;
+  /* 最小宽度 */
+  min-width: 1500px;
   height: 50px;
   solid-color: rgba(55, 55, 58, 0.06);
   background-color: #ffffff;

@@ -22,3 +22,12 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### 添加自适应依赖
+
+```
+npm i lib-flexible -S
+npm i px2rem-loader -D
+npm i postcss-px2rem --s
+```
+
