@@ -16,7 +16,5 @@ var fun = function (doc, win) {
 }
 fun(document, window);
 window.onresize = function () {
-    var screenWidth = window.innerWidth // 修改浏览器分辨率 动态获取分辨率宽度
-    console.log(screenWidth)
     fun(document, window);
 }

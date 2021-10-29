@@ -68,38 +68,38 @@
     <!--  路由到其他视图，路由中所有其他视图都会应用到该视图的样式  -->
     <router-view/>
 	<!--  页脚    -->
-	<el-footer style="width: 1510px;height: 200px; background-color: #2c3e50;bottom: 1px;">
-	  <el-row :gutter="20" style="width: 1000px;margin-left: 300px;margin-top: 2%">
-	    <el-col :span="5">
-	      <el-link :underline="false" icon="el-icon-user-solid">el-icon-user-solid</el-link>
-	      <el-link :underline="false" icon="el-icon-user">el-icon-user</el-link>
-	      <el-link :underline="false" icon="el-icon-phone">el-icon-phone</el-link>
-	      <el-link :underline="false" icon="el-icon-phone-outline">el-icon-phone-outline</el-link>
-	      <el-link :underline="false" icon="el-icon-goods">el-icon-goods</el-link>
-	    </el-col>
-	    <el-col :span="5">
-	      <el-link :underline="false" icon="el-icon-success">el-icon-success</el-link>
-	      <el-link :underline="false" icon="el-icon-error">el-icon-error</el-link>
-	      <el-link :underline="false" icon="el-icon-check">el-icon-check</el-link>
-	      <el-link :underline="false" icon="el-icon-close">el-icon-close</el-link>
-	      <el-link :underline="false" icon="el-icon-upload2">el-icon-upload2</el-link>
-	    </el-col>
-	    <el-col :span="5">
-	      <el-link :underline="false" icon="el-icon-download">el-icon-download</el-link>
-	      <el-link :underline="false" icon="el-icon-s-platform">el-icon-s-platform</el-link>
-	      <el-link :underline="false" icon="el-icon-s-promotion">el-icon-s-promotion</el-link>
-	      <el-link :underline="false" icon="el-icon-s-home">el-icon-s-home</el-link>
-	      <el-link :underline="false" icon="el-icon-user-solid">el-icon-user-solid</el-link>
-	    </el-col>
-	    <el-col :span="5">
-	      <el-link :underline="false" icon="el-icon-user-solid">el-icon-user-solid</el-link>
-	      <el-link :underline="false" icon="el-icon-user-solid">el-icon-user-solid</el-link>
-	      <el-link :underline="false" icon="el-icon-user-solid">el-icon-user-solid</el-link>
-	      <el-link :underline="false" icon="el-icon-user-solid">el-icon-user-solid</el-link>
-	      <el-link :underline="false" icon="el-icon-user-solid">el-icon-user-solid</el-link>
-	    </el-col>
-	  </el-row>
-	</el-footer>
+<!--	<el-footer style="width: 1510px;height: 200px; background-color: #2c3e50;bottom: 1px;">-->
+<!--	  <el-row :gutter="20" style="width: 1000px;margin-left: 300px;margin-top: 2%">-->
+<!--	    <el-col :span="5">-->
+<!--	      <el-link :underline="false" icon="el-icon-user-solid">el-icon-user-solid</el-link>-->
+<!--	      <el-link :underline="false" icon="el-icon-user">el-icon-user</el-link>-->
+<!--	      <el-link :underline="false" icon="el-icon-phone">el-icon-phone</el-link>-->
+<!--	      <el-link :underline="false" icon="el-icon-phone-outline">el-icon-phone-outline</el-link>-->
+<!--	      <el-link :underline="false" icon="el-icon-goods">el-icon-goods</el-link>-->
+<!--	    </el-col>-->
+<!--	    <el-col :span="5">-->
+<!--	      <el-link :underline="false" icon="el-icon-success">el-icon-success</el-link>-->
+<!--	      <el-link :underline="false" icon="el-icon-error">el-icon-error</el-link>-->
+<!--	      <el-link :underline="false" icon="el-icon-check">el-icon-check</el-link>-->
+<!--	      <el-link :underline="false" icon="el-icon-close">el-icon-close</el-link>-->
+<!--	      <el-link :underline="false" icon="el-icon-upload2">el-icon-upload2</el-link>-->
+<!--	    </el-col>-->
+<!--	    <el-col :span="5">-->
+<!--	      <el-link :underline="false" icon="el-icon-download">el-icon-download</el-link>-->
+<!--	      <el-link :underline="false" icon="el-icon-s-platform">el-icon-s-platform</el-link>-->
+<!--	      <el-link :underline="false" icon="el-icon-s-promotion">el-icon-s-promotion</el-link>-->
+<!--	      <el-link :underline="false" icon="el-icon-s-home">el-icon-s-home</el-link>-->
+<!--	      <el-link :underline="false" icon="el-icon-user-solid">el-icon-user-solid</el-link>-->
+<!--	    </el-col>-->
+<!--	    <el-col :span="5">-->
+<!--	      <el-link :underline="false" icon="el-icon-user-solid">el-icon-user-solid</el-link>-->
+<!--	      <el-link :underline="false" icon="el-icon-user-solid">el-icon-user-solid</el-link>-->
+<!--	      <el-link :underline="false" icon="el-icon-user-solid">el-icon-user-solid</el-link>-->
+<!--	      <el-link :underline="false" icon="el-icon-user-solid">el-icon-user-solid</el-link>-->
+<!--	      <el-link :underline="false" icon="el-icon-user-solid">el-icon-user-solid</el-link>-->
+<!--	    </el-col>-->
+<!--	  </el-row>-->
+<!--	</el-footer>-->
   </div>
 </template>
 <script>
@@ -116,9 +116,11 @@ export default {
     handleNodeClick(data) {
       console.log(data);
     },
+
   },
   // 安装
   mounted() {
+
   }
 }
 </script>

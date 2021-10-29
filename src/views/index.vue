@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="all" id="all" style="height: 100%;">
    <el-container>
-     <div class="main">
-       <el-main>
+     <div class="main" id="main" style="width: 1300px">
+       <el-main >
          <!--   页头导航栏      -->
          <el-row :gutter="20" style="margin-left: 10%;">
            <el-col :span="2">
@@ -69,6 +69,7 @@
 
 <script>
 import '../static/css/main-contain.css'
+import '../static/js/self-adaption'
 export default {
   name: "index",
   data() {
@@ -196,8 +197,13 @@ export default {
   methods: {
     handleNodeClick(data) {
       console.log(data);
-    }
-  }
+    },
+
+  },
+  mounted() {
+
+  },
+
 }
 </script>
 

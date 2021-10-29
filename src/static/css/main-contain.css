@@ -1,5 +1,5 @@
 .main{
-    width: 100%;
+    width: 1300px;
     background-color: #fafafa;
     margin-top: 20px;
     /*position:absolute;*/
@@ -9,4 +9,9 @@
     /*display: flex;*/
     /*justify-content: space-around;*/
     /*max-width: 1300px;*/
+}
+.all {
+    width: 100%;
+
+    background-color: #fafafa;
 }
