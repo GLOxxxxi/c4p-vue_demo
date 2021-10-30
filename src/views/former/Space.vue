@@ -1,12 +1,12 @@
 <template>
-  <div id="app">
+  <div class="all" id="all" style="height: 100%;">
     <el-container>
-      <div class="main">
+      <div class="main" id="main" style="width: 1300px">
         <img alt="个人头像" src="../../assets/晚晚.png" style="border-radius:50%;width: 300px;height: 300px">
-        <label>{{ space.nickname }}</label>
+<!--        <label>{{ space }}</label>-->
         <el-button type="danger" @click="personalSpace">控制台see see</el-button>
 
-        <label> 昵称：{{ space.nickname }}</label>
+        <label> 昵称：{{ nickname }}</label>
       </div>
     </el-container>
   </div>
@@ -22,43 +22,36 @@ export default {
   data() {
     return {
       space: {}, // 个人信息
+      nickname: '',
     }
 
   },
   methods: {
     personalSpace: async function () {
-      console.log(1)
       axios({
         methods: 'get', // 请求方法
-        url: '/user/1', // 请求路径
-        baseURL: '/api' // 路径 http://localhost:8081/api/user/1
+        // url: '/users/1', // 请求路径
+        // baseURL: '/api' // 路径 http://localhost:8081/api/users/1
+        baseURL: 'http://172.16.6.144:8082/users/1' // 路径 http://localhost:8081/api/users/1
         // params: { // 需要携带的参数
         //   id:1
         // }
       }).then(this.showMessage)
     },
     showMessage(res) {
-      console.log(res.data.data.user)
-      this.space = res.data.data.user
+      console.log(res.data.data)
+      this.space = res.data.data
+      this.nickname = this.space.nickname
 
     },
-    getScreen: function () {
-      const screenWidth = window.screen // 获取当前屏幕对象
-      console.log(screenWidth.width) // 屏幕宽度
-	  // dom操作只能在加载完界面之后执行，所以不能在create函数中，可以放在mounted函数中
-    //   document.getElementById("app").setAttribute("style","width: 1920px;")
-      // .setAttribute("style", "width: 1920px")
-    }
-
   },
   // 生命周期之加载时就调用的方法
   created() {
-    this.personalSpace();
+    // this.personalSpace();
 
   },
   // 安装
   mounted() {
-    this.getScreen()
   }
 
 }

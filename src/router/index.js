@@ -9,7 +9,11 @@ const routes = [
   {
     path: '/',
     name: 'index',
-    component: Index
+    component: Index,
+    meta: {
+      title: '主页',
+      keepAlive: true
+    }
   },
   {
     path: '/about',

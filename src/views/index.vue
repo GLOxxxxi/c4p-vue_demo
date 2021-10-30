@@ -7,7 +7,7 @@
          <el-row :gutter="20" style="margin-left: 10%;">
            <el-col :span="2">
 			 <router-link to="/space">
-				 space 
+				 个人空间入口
 			 </router-link>
              <el-link :underline="false" type="info" href="#" target="_blank">Python</el-link>
            </el-col>
