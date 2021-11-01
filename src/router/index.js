@@ -12,7 +12,7 @@ const routes = [
     component: Index,
     meta: {
       title: '主页',
-      keepAlive: true
+      keepAlive: true,
     }
   },
   {
@@ -26,7 +26,11 @@ const routes = [
   {
     path: '/space',
     name: 'Space',
-    component: () => import( '../views/former/Space')
+    component: () => import( '../views/former/Space'),
+    meta: {
+      title: '个人中心',
+      keepAlive: true,
+    }
   }
 ]
 

@@ -3,10 +3,10 @@ getCurrentScreen =  function () {
     // window.innerWidth // 加上滚动条的宽度
     // document.documentElement.clientWidth || document.body.clientWidth; // 页面不含滚动条的宽度
     var screenWidth = document.documentElement.clientWidth || document.body.clientWidth// 修改浏览器分辨率 动态获取分辨率宽度
-    const main = document.getElementById("main");
-    console.log(main.style.width.replace("px", "")) // 获取盒子的宽度去除px隐式转换
+    // const main = document.getElementById("main");
+    console.log(main.style.width.replace("px", "")) // 获取盒子的宽度去除px,隐式转换
     main.style.marginLeft = (screenWidth - main.style.width.replace("px", "")) / 2 + "px"; // 动态居中
-    console.log(screenWidth)
+    // console.log(screenWidth)
 }
 /* 设置全局背景色 */
 setBackgroundColor = function () {
@@ -29,4 +29,6 @@ window.onresize = function () {
 /* 入口函数 */
 window.onload = function () {
     this.getCurrentScreen()
+    this.setBackgroundColor()
+
 }

@@ -67,6 +67,8 @@
 	</el-container>
     <!--  路由到其他视图，路由中所有其他视图都会应用到该视图的样式  -->
     <router-view/>
+    <!--   todo: 回到顶部 -->
+    <!--    -->
 	<!--  页脚    -->
 <!--	<el-footer style="width: 1510px;height: 200px; background-color: #2c3e50;bottom: 1px;">-->
 <!--	  <el-row :gutter="20" style="width: 1000px;margin-left: 300px;margin-top: 2%">-->
@@ -163,7 +165,7 @@ li {
   z-index: 9999;
   /* 固定工具栏 上下滚动固定位置，左右滚动正常 */
   position: sticky;
-  top: 10px;
+  top: 9px;
   width: 100%;
   /* 最小宽度 */
   min-width: 1500px;
