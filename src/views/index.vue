@@ -9,7 +9,9 @@
 			 <router-link to="/space">
 				 个人空间入口
 			 </router-link>
-             <el-link :underline="false" type="info" href="#" target="_blank">Python</el-link>
+             <el-link :underline="false" type="info" href="#" target="_blank">
+<!--               <button class="btn btn-outline-danger">bootstrap</button>-->
+             </el-link>
            </el-col>
            <el-col :span="2">
              <el-link :underline="false" type="info" href="#" target="_blank">Java</el-link>
@@ -70,6 +72,7 @@
 <script>
 import '../static/css/main-contain.css'
 import '../static/js/self-adaption'
+import $ from "jquery"
 export default {
   name: "index",
   data() {
@@ -198,10 +201,13 @@ export default {
     handleNodeClick(data) {
       console.log(data);
     },
+    jq: function(){
+      console.log($)
+    }
 
   },
   mounted() {
-
+    this.jq()
   },
 
 }

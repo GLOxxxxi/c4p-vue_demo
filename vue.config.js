@@ -1,3 +1,4 @@
+const webpack = require("webpack");
 module.exports ={
     devServer: {
         // development server port 8000
@@ -18,5 +19,19 @@ module.exports ={
             }
         }
     },
-    lintOnSave: false
+    lintOnSave: false,
+    /* jQuery */
+    // entry: './index.js',
+    // output: {
+    //     path: path.join(__dirname, '.dist'),
+    //     publicPath: '/dist/',
+    //     filename: 'index.js'
+    // },
+    // plugins: [
+    //     new webpack.ProvidePlugin({
+    //         jQuery: "jquery",
+    //         $: "jquery"
+    //     })
+    // ]
+
 }

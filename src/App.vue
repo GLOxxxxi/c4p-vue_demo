@@ -35,7 +35,7 @@
 	              v-model="input"
 	              clearable/>
 	          <!--左上 右上  右下 左下     -->
-	          <el-button style="border-radius: 0px 10px 10px 0px;" class="same btn" type="primary"
+	          <el-button style="border-radius: 0px 10px 10px 0px;" class="same btns" type="primary"
 	                     icon="el-icon-search">搜索
 	          </el-button>
 	        </div>
@@ -106,6 +106,8 @@
 </template>
 <script>
 import './static/js/rem'
+import './static/js/self-adaption'
+import $ from "jquery"
 export default {
   name: "index",
   data() {
@@ -151,7 +153,7 @@ li {
   height: 80%;
   background-color: #D3DCE6;
 }
-.btn {
+.btns {
   width: 20%;
   height: 125%;
   border-left: none;
