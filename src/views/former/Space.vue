@@ -15,6 +15,8 @@
 <script>
 import '../../static/css/main-contain.css'
 import axios from "axios";
+import {getUserById} from "../../api/api";
+import {getUsers} from "../../api/api";
 
 export default {
 
@@ -28,6 +30,9 @@ export default {
   },
   methods: {
     personalSpace: async function () {
+      // debugger
+      const {data} = await getUsers(1, 5)
+      console.log(data)
       axios({
         methods: 'get', // 请求方法
         // url: '/users/1', // 请求路径

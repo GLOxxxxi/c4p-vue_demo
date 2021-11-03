@@ -202,7 +202,7 @@ export default {
       console.log(data);
     },
     jq: function(){
-      console.log($)
+      // console.log($)
     }
 
   },

@@ -1,5 +1,6 @@
 const webpack = require("webpack");
 module.exports ={
+    publicPath:"./",
     devServer: {
         // development server port 8000
         // 设置前端端口
@@ -9,16 +10,22 @@ module.exports ={
         proxy : {
             '/api': {
                 // 配置跨域请求路径
-                target: 'http://localhost:8082',
+                // target: 'http://localhost:8082',
+                target: 'http://172.16.6.144:8082',
                 ws: false,
-                changeOrigin : true,
+                secure: false,
+                changeOrigin : true, // 允许跨域
                 // 重写请求地址
                 pathRewrite:{
-                    "/api":""
+                    '^/api':''
                 }
             }
-        }
+        },
+        // 此处开启 https
+        // https: true,
     },
+
+
     lintOnSave: false,
     /* jQuery */
     // entry: './index.js',
