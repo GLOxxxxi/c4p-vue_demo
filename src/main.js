@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import * as echarts from 'echarts'
 /* router 路由 请求地址管理 */
 import router from './router'
 /* element ui 前端组件 */
@@ -12,19 +13,25 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import axios from 'axios'
 /* 提供jQuery库 */
 import $ from 'jquery' ;
-
+import VueNeo4j from 'vue-neo4j'
 import store from './store'
-
+import Neovis from 'neovis.js'
 /* 添加自适应js */
 import './utils/flexible'
+// const echarts = require("echarts")
+
+// 引入echarts
 
 
+Vue.prototype.$echarts = echarts
 // Vue.use($)
 Vue.config.productionTip = false
 /* 允许跨域携带cookie */
 axios.defaults.withCredentials = true
 /* element ui */
 Vue.use(ElementUI)
+
+Vue.use(VueNeo4j)
 /* bootstrap */
 // Vue.use(bootstrap)
 Vue.prototype.$axios = axios

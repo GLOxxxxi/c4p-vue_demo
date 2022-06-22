@@ -1,6 +1,8 @@
 const webpack = require("webpack");
 module.exports ={
     publicPath:"./",
+    // 输出文件夹
+    outputDir: 'dist',
     devServer: {
         // development server port 8000
         // 设置前端端口
@@ -26,6 +28,7 @@ module.exports ={
     },
 
 
+    // 是否在保存的时候校验 eslint
     lintOnSave: false,
     /* jQuery */
     // entry: './index.js',
