@@ -60,10 +60,15 @@ export default {
   methods: {
     draw() {
       var config = {
+        // 盒子id
         container_id: "viz",
+        // 图数据库地址
         server_url: "",
+        // 图数据库账号
         server_user: "",
+        // 图数据库密码
         server_password: "",
+        // 节点配置
         labels: {
           //"Character": "name",
           Character: {
@@ -72,9 +77,13 @@ export default {
             community: "community",
             //"sizeCypher": "MATCH (n) WHERE id(n) = {id} MATCH (n)-[r]-() RETURN sum(r.weight) AS c"
           },
+          // 节点名称
           Building: {
+            // 展示名称
             caption: "buildingName",
+            // 
             size: "pagerank",
+            // 图标
             image: "https://visjs.org/images/visjs_logo.png",
             //"sizeCypher": "MATCH (n) WHERE id(n) = {id} MATCH (n)-[r]-() RETURN sum(r.weight) AS c"
           },
@@ -104,16 +113,13 @@ export default {
             color: "black",
           },
         },
+        // 关系
         relationships: {
-          DistributionFrame2DistributionFrame: {
-            caption: false,
-            thickness: "count",
-            value: false,
-            size: 0,
-          },
-
+          // 关系名称
           Disc2Port: {
+            // 宽度
             thickness: "weight",
+            // 展示名称
             caption: false,
           },
           Building2Floor: {
@@ -140,16 +146,22 @@ export default {
         },
         //查询节点的语句，写成你们的
         // initial_cypher: "MATCH p=(n:Building{buildingName:'建筑1'})-[*6]->(:Port)-[]->(:Port)<-[*6]-(:Building{buildingName:'建筑2'}) RETURN p;"
+        // 执行的初始化cypher语言
         initial_cypher:
           "match p = (:Building{buildingName:'建筑1'})-[*]-(:Building{buildingName:'建筑4'}) where NONE(x in relationships(p) where type(x) = 'DistributionFrame2DistributionFrame') return p",
+        // 是否展示箭头
         arrows: true,
+        // 布局方式
         hierarchical_layout: true,
+        // 布局排序方法
         hierarchical_sort_method: "directed",
       };
       config.server_url = "bolt://localhost:7687"
       config.server_user = "neo4j"
       config.server_password = "123456"
+      // 创建Neovis对象
       const viz = new NeoVis(config);
+      // 执行操作
       viz.render();
     },
 
